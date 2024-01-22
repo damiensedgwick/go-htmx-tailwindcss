@@ -1,6 +1,7 @@
 # Go, HTMX & TailwindCSS
 
-A quick and easy way to get setup with **The Best** technologies on the web!
+A quick and easy way to get setup with **The Best** technologies on the web! This project has been setup as a template
+which means you can use it as such and then strip away anything you do not need, or add in what you do need.
 
 ## Setup
 In order to use the repo, you will need to download and setup [Standalone TailwindCSS](https://tailwindcss.com/blog/standalone-cli) - 
