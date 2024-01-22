@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Ask the user what they would like to call the project and store the result in a variable called PROJECT_NAME
-read -p "What would you like to call your project? " PROJECT_NAME
-
 echo "Generating your go-htmx-tailwindcss web application..."
 
 # Example project URL will be https://github.com/damiensedgwick/go-htmx-tailwindcss/_example
@@ -12,7 +9,7 @@ echo "Generating your go-htmx-tailwindcss web application..."
 # Set the repository URL
 REPO_URL="https://github.com/damiensedgwick/go-htmx-tailwindcss.git"
 EXAMPLE_DIR="_example"
-DEST_DIR="$PROJECT_NAME"
+DEST_DIR="go-htmx-tailwindcss"
 
 # Clone the repository and copy the _example directory
 git clone --depth 1 $REPO_URL $DEST_DIR
