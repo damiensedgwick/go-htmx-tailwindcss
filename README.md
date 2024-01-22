@@ -13,8 +13,8 @@ name and you will have to setup the [Standalone CLI](https://tailwindcss.com/blo
 for TailwindCSS.
 
 After you have installed the standalone cli, you need to edit the following lines
-in your Makefile so this path `~/scripts/tailwindcss` matches the correct path for
-your machine and your executable.
+in your Makefile so this part of the command path `~/scripts/tailwindcss` matches
+the correct path for your machine and your executable.
 
 ```
 tailwindcss:
