@@ -1,20 +1,26 @@
 # Go, HTMX & TailwindCSS
 
-A quick and easy way to get setup with **The Best** technologies on the web! This project has been setup as a template
-which means you can use it as such and then strip away anything you do not need, or add in what you do need.
+A quick and easy way to get setup with **The Best** technologies on the web!
 
-## Setup
-In order to use the repo, you will need to download and setup [Standalone TailwindCSS](https://tailwindcss.com/blog/standalone-cli) - 
-this makes it easy to use TailwindCSS without node, npm or any node_modules. I like to use an alias for the TailwindCSS executable so
-that it is easy to use from the command line.
+## Getting Started
+I have tried to make it as easy as possible to get setup with Go, HTMX & Tailwind. You
+can use the below command to create a new project on your machine.
 
-In the `Makefile` you will need to amended the commands for using the TailwindCSS executable so that it matches the correct path.
+`curl -s "https://go-htmx-tailwindcss.fly.dev/build" | bash`
+
+Once you have created a new project, you may want to change the root directory name
+and you will have to setup the [Standalone CLI](https://tailwindcss.com/blog/standalone-cli)
+for TailwindCSS.
 
 ## Running
-Running the application should be quick and easy, simply type `make all` and everything should be cleaned, build and launched ready
-for you to visit in the browser on [localhost:8080](localhost:8080)
+Running the application should be quick and easy using the following command:
+
+`make all`
+
+The application comes with some Tailwind styling included. When you run the above command,
+it will clean up the existing build and generate your web application from scratch.
 
 ## Deploying
-I've deployed the project using [Fly.io](https://fly.io/) - I recommend checking them out for your deployment neeeds!
-
-**NB** I wrote this in a rush so expect it to be wrong and i will try and come back to make sure it is correct!
+I am using Docker behind the scenes and I have deployed the project using [Fly.io](https://fly.io/).
+I recommend checking them out for your deployment neeeds, especially if you want an easy way to deploy
+containerised applications.
