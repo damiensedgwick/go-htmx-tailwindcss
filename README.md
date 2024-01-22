@@ -17,8 +17,11 @@ Running the application should be quick and easy using the following command:
 
 `make all`
 
-The application comes with some Tailwind styling included. When you run the above command,
-it will clean up the existing build and generate your web application from scratch.
+The application comes with some Tailwind styling included but you will need the standalone cli
+to continue building out your application.
+
+When you run the above command, it will clean up the existing build and it will do a fresh build
+of your application.
 
 ## Deploying
 I am using Docker behind the scenes and I have deployed the project using [Fly.io](https://fly.io/).
