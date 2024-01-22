@@ -8,7 +8,7 @@ can use the below command to create a new project on your machine.
 
 `curl -s "https://go-htmx-tailwindcss.fly.dev/build" | bash`
 
-Once you have created a new project, you may want to change the root directory name
+Once you have created a new project, you may want to change the project directory name
 and you will have to setup the [Standalone CLI](https://tailwindcss.com/blog/standalone-cli)
 for TailwindCSS.
 
