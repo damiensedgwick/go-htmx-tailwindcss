@@ -29,9 +29,5 @@ func main() {
 		return c.Render(http.StatusOK, "index.html", nil)
 	})
 
-	e.GET("/build", func(c echo.Context) error {
-		return c.File("public/build/build.sh")
-	})
-
 	e.Logger.Fatal(e.Start("0.0.0.0:8080"))
 }

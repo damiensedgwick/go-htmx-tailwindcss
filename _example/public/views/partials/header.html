@@ -1,0 +1,21 @@
+{{template "index.html" .}}
+
+{{define "header"}}
+
+<header class="px-5 w-screen h-screen flex flex-col justify-center items-center space-y-8 bg-slate-900 md:px-0">
+    <h1
+        class="bg-gradient-to-r from-teal-500 from-10% via-indigo-500 via-40% to-cyan-500 to-80% bg-clip-text text-transparent text-center font-bold text-4xl md:text-7xl lg:text-9xl">
+        <span>Go,</span>
+        <span>HTMX&nbsp;</span>
+        <br>
+        <span>&amp;&nbsp;TailwindCSS</span>
+    </h1>
+    <div class="flex flex-col items-center justify-center space-y-8">
+        <p class="text-white text-lg max-w-prose">
+            A quick and easy way to get up and running with <span class="font-semibold">The Greatest</span> technologies
+            currently available for building dymamic web applications with minimal effort.
+        </p>
+    </div>
+</header>
+
+{{end}}
