@@ -26,7 +26,7 @@ func main() {
 	e.Static("/static", "static")
 
 	e.GET("/", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "index.html", nil)
+		return c.Render(http.StatusOK, "index.gohtml", nil)
 	})
 
 	e.Logger.Fatal(e.Start("0.0.0.0:8080"))

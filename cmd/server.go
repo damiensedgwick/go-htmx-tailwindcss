@@ -18,7 +18,7 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 
 func main() {
 	t := &Template{
-		templates: template.Must(template.ParseGlob("public/views/**/*.html")),
+		templates: template.Must(template.ParseGlob("public/views/**/*.gohtml")),
 	}
 
 	e := echo.New()
@@ -26,7 +26,7 @@ func main() {
 	e.Static("/static", "static")
 
 	e.GET("/", func(c echo.Context) error {
-		return c.Render(http.StatusOK, "index.html", nil)
+		return c.Render(http.StatusOK, "index.gohtml", nil)
 	})
 
 	e.GET("/build", func(c echo.Context) error {
