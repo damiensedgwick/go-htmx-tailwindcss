@@ -4,7 +4,7 @@ BINARY_NAME=go-htmx-tailwindcss
 
 build:
 	@echo "Building Go binary..."
-	@go build -o bin/server cmd/server.go
+	@go build -o bin/${BINARY_NAME} cmd/server.go
 
 clean:
 	@echo "Cleaning up previous build..."
