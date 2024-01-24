@@ -22,7 +22,7 @@ which I have highlighted below.
 
 #### Change the directory name to your desired project name
 
-`mv go-htmx-tailwindcss <your-project-name`
+`mv go-htmx-tailwindcss <your-project-name>`
 
 #### Update your Makefile
 
