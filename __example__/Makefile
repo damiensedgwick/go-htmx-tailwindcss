@@ -1,6 +1,6 @@
 .PHONY: clean tailwindcss templ build run
 
-BINARY_NAME=go-htmx-tailwindcss
+BINARY_NAME=<your-binary-name>
 
 build:
 	@echo "Building Go binary..."
@@ -16,10 +16,10 @@ run:
 
 tailwindcss:
 	@echo "Building TailwindCSS..."
-	@/home/dks/scripts/tailwindcss -i lib/tailwindcss.css -o static/css/tailwindcss.css --minify
+	@<path-to-your-tailwind-executable> -i lib/tailwindcss.css -o static/css/tailwindcss.css --minify
 
 templ:
 	@echo "Building templates..."
-	@/home/dks/go/bin/templ generate
+	@<path-to-your-templ-executable> generate
 
 all: clean tailwindcss templ build run
