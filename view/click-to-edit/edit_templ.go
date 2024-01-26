@@ -32,7 +32,7 @@ func Edit() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2 w-96\" type=\"text\" name=\"firstName\" value=\"Joe\"></div><div class=\"flex flex-col space-y-1\"><label>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2\" type=\"text\" name=\"firstName\" value=\"Joe\"></div><div class=\"flex flex-col space-y-1\"><label>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -41,7 +41,7 @@ func Edit() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2 w-96\" type=\"text\" name=\"lastName\" value=\"Blow\"></div><div class=\"flex flex-col space-y-1\"><label>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2\" type=\"text\" name=\"lastName\" value=\"Blow\"></div><div class=\"flex flex-col space-y-1\"><label>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -50,7 +50,7 @@ func Edit() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2 w-96\" type=\"phone\" name=\"phone\" value=\"555-555-5555\"></div><div class=\"flex flex-col space-y-1\"><label>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2\" type=\"phone\" name=\"phone\" value=\"555-555-5555\"></div><div class=\"flex flex-col space-y-1\"><label>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -59,7 +59,7 @@ func Edit() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2 w-96\" type=\"email\" name=\"email\" value=\"joe@blow.com\"></div></div><div class=\"flex items-center justify-end space-x-2\"><button class=\"bg-red-500 text-white hover:bg-white hover:text-gray-800 font-semibold py-1 px-2 rounded shadow text-lg flex items-center justify-center\" hx-get=\"/click-to-edit/1\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</label> <input class=\"rounded p-2\" type=\"email\" name=\"email\" value=\"joe@blow.com\"></div></div><div class=\"flex items-center justify-end space-x-2\"><button class=\"bg-red-500 text-white hover:bg-white hover:text-gray-800 font-semibold py-1 px-2 rounded shadow text-lg flex items-center justify-center\" hx-get=\"/click-to-edit/1\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

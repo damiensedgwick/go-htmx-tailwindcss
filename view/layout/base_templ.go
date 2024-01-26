@@ -32,7 +32,7 @@ func Base() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><meta name=\"description\" content=\"A quick and easy way to get set up using Go, HTMX and TailwindCSS. Authored by Damien Sedgwick.\"><link rel=\"icon\" href=\"/static/favicon.ico\"><link rel=\"stylesheet\" href=\"/static/css/tailwindcss.css\"></head><body class=\"bg-gray-100\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><meta name=\"description\" content=\"A quick and easy way to get set up using Go, HTMX and TailwindCSS. Authored by Damien Sedgwick.\"><link rel=\"icon\" href=\"/static/favicon.ico\"><link rel=\"stylesheet\" href=\"/static/css/tailwindcss.css\"></head><body class=\"bg-gray-100 overflow-x-hidden\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
