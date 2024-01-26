@@ -1,6 +1,9 @@
 package home 
 
-import "github.com/damiensedgwick/go-htmx-tailwindcss/view/layout"
+import (
+	clicktoedit "github.com/damiensedgwick/go-htmx-tailwindcss/view/click-to-edit"
+	"github.com/damiensedgwick/go-htmx-tailwindcss/view/layout"
+)
 
 templ Show() {
 	@layout.Base() {
@@ -96,11 +99,11 @@ templ About() {
 						</p>
 					</div>
 					<a
-						class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 border border-white rounded shadow-xl text-lg flex items-center justify-center"
+						class="bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded shadow-xl text-lg flex items-center justify-center"
 						href="https://go.dev/doc/"
 						target="_blank"
 						rel="noopener norefer"
-					>Get Started</a>
+					>Learn Go</a>
 				</div>
 				<div class="flex flex-col justify-between space-y-8 py-4">
 					<div class="space-y-4">
@@ -114,11 +117,11 @@ templ About() {
 						</p>
 					</div>
 					<a
-						class="bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 border border-white rounded shadow-xl text-lg flex items-center justify-center"
+						class="bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded shadow-xl text-lg flex items-center justify-center"
 						href="https://htmx.org/docs/"
 						target="_blank"
 						rel="noopener noopener"
-					>Get Started</a>
+					>Learn HTMX</a>
 				</div>
 				<div class="flex flex-col justify-between space-y-8 py-4">
 					<div class="space-y-4">
@@ -132,13 +135,12 @@ templ About() {
 						</p>
 					</div>
 					<a
-						class="bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-2 px-4 border border-white rounded shadow-xl text-lg flex items-center justify-center"
+						class="bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded shadow-xl text-lg flex items-center justify-center"
 						href="https://tailwindcss.com/docs/installation"
 						target="_blank"
 						rel="noopener norefer"
 					>
-						Get
-						Started
+						Learn TailwindCSS
 					</a>
 				</div>
 			</div>
@@ -147,7 +149,7 @@ templ About() {
 }
 
 templ Examples() {
-	<section class="space-y-8 py-32 bg-slate-900">
+	<section class="space-y-8 py-32 bg-slate-900" id="examples">
 		<div class="container mx-auto px-5 space-y-4">
 			<h3
 				class="font-semibold text-4xl lg:text-5xl bg-gradient-to-r from-teal-500 from-5% via-indigo-500 via-20% to-cyan-500 to-50% bg-clip-text text-transparent"
@@ -155,7 +157,25 @@ templ Examples() {
 				Examples
 			</h3>
 			<div class="space-y-8 py-4">
-				<p class="font-semibold text-3xl lg:text-4xl text-white">Coming Soon...</p>
+				<p class="max-w-prose text-lg lg:text-xl text-white">
+					Below are some examples of what can be achieved with this stack.
+					I have taken the examples from the HTMX website and converted them
+					to use Go and TailwindCSS to de3monstrate how easy it is to get
+					started.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="space-y-8 py-32">
+		<div class="container mx-auto px-5 space-y-4">
+			<h3
+				class="font-semibold text-4xl lg:text-5xl bg-gradient-to-r from-teal-500 from-5% via-indigo-500 via-20% to-cyan-500 to-50% bg-clip-text text-transparent"
+			>
+				Click To Edit
+			</h3>
+			<p class="max-w-prose text-lg lg:text-xl text-white"></p>
+			<div class="max-w-md p-8 rounded-lg shadow-lg border">
+				@clicktoedit.Show()
 			</div>
 		</div>
 	</section>

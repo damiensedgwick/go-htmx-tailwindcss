@@ -10,7 +10,10 @@ import "context"
 import "io"
 import "bytes"
 
-import "github.com/damiensedgwick/go-htmx-tailwindcss/view/layout"
+import (
+	clicktoedit "github.com/damiensedgwick/go-htmx-tailwindcss/view/click-to-edit"
+	"github.com/damiensedgwick/go-htmx-tailwindcss/view/layout"
+)
 
 func Show() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
@@ -248,11 +251,11 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><a class=\"bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 border border-white rounded shadow-xl text-lg flex items-center justify-center\" href=\"https://go.dev/doc/\" target=\"_blank\" rel=\"noopener norefer\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><a class=\"bg-teal-500 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded shadow-xl text-lg flex items-center justify-center\" href=\"https://go.dev/doc/\" target=\"_blank\" rel=\"noopener norefer\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var21 := `Get Started`
+		templ_7745c5c3_Var21 := `Learn Go`
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var21)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
@@ -311,11 +314,11 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><a class=\"bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 border border-white rounded shadow-xl text-lg flex items-center justify-center\" href=\"https://htmx.org/docs/\" target=\"_blank\" rel=\"noopener noopener\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><a class=\"bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded shadow-xl text-lg flex items-center justify-center\" href=\"https://htmx.org/docs/\" target=\"_blank\" rel=\"noopener noopener\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var28 := `Get Started`
+		templ_7745c5c3_Var28 := `Learn HTMX`
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var28)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
@@ -374,21 +377,12 @@ func About() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><a class=\"bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-2 px-4 border border-white rounded shadow-xl text-lg flex items-center justify-center\" href=\"https://tailwindcss.com/docs/installation\" target=\"_blank\" rel=\"noopener norefer\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div><a class=\"bg-cyan-500 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded shadow-xl text-lg flex items-center justify-center\" href=\"https://tailwindcss.com/docs/installation\" target=\"_blank\" rel=\"noopener norefer\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var35 := `Get`
+		templ_7745c5c3_Var35 := `Learn TailwindCSS`
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var35)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Var36 := `Started`
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var36)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -411,30 +405,74 @@ func Examples() templ.Component {
 			defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 		}
 		ctx = templ.InitializeContext(ctx)
-		templ_7745c5c3_Var37 := templ.GetChildren(ctx)
-		if templ_7745c5c3_Var37 == nil {
-			templ_7745c5c3_Var37 = templ.NopComponent
+		templ_7745c5c3_Var36 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var36 == nil {
+			templ_7745c5c3_Var36 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"space-y-8 py-32 bg-slate-900\"><div class=\"container mx-auto px-5 space-y-4\"><h3 class=\"font-semibold text-4xl lg:text-5xl bg-gradient-to-r from-teal-500 from-5% via-indigo-500 via-20% to-cyan-500 to-50% bg-clip-text text-transparent\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"space-y-8 py-32 bg-slate-900\" id=\"examples\"><div class=\"container mx-auto px-5 space-y-4\"><h3 class=\"font-semibold text-4xl lg:text-5xl bg-gradient-to-r from-teal-500 from-5% via-indigo-500 via-20% to-cyan-500 to-50% bg-clip-text text-transparent\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var38 := `Examples`
+		templ_7745c5c3_Var37 := `Examples`
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var37)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3><div class=\"space-y-8 py-4\"><p class=\"max-w-prose text-lg lg:text-xl text-white\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Var38 := `Below are some examples of what can be achieved with this stack.`
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var38)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3><div class=\"space-y-8 py-4\"><p class=\"font-semibold text-3xl lg:text-4xl text-white\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var39 := `Coming Soon...`
+		templ_7745c5c3_Var39 := `I have taken the examples from the HTMX website and converted them`
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var39)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div></section>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Var40 := `to use Go and TailwindCSS to de3monstrate how easy it is to get`
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var40)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Var41 := `started.`
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var41)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</p></div></div></section><section class=\"space-y-8 py-32\"><div class=\"container mx-auto px-5 space-y-4\"><h3 class=\"font-semibold text-4xl lg:text-5xl bg-gradient-to-r from-teal-500 from-5% via-indigo-500 via-20% to-cyan-500 to-50% bg-clip-text text-transparent\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Var42 := `Click To Edit`
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var42)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</h3><p class=\"max-w-prose text-lg lg:text-xl text-white\"></p><div class=\"max-w-md p-8 rounded-lg shadow-lg border\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = clicktoedit.Show().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div></section>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -2,7 +2,7 @@ package layout
 
 templ Base() {
 	<!DOCTYPE html>
-	<html lang="en">
+	<html class="scroll-smooth" lang="en">
 		<head>
 			<meta charset="utf-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,7 +11,7 @@ templ Base() {
 			<link rel="icon" href="/static/favicon.ico"/>
 			<link rel="stylesheet" href="/static/css/tailwindcss.css"/>
 		</head>
-		<body>
+		<body class="bg-gray-100">
 			{ children... }
 			<script src="/static/js/htmx.min.js"></script>
 		</body>

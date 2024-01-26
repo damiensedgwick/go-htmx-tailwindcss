@@ -9,6 +9,8 @@ build:
 clean:
 	@echo "Cleaning up previous build..."
 	@rm -rf bin
+	@echo "Cleaning up previous TailwindCSS..."
+	@rm -rf static/css/tailwindcss.css
 
 run:
 	@echo "Running Go binary..."
